@@ -13,12 +13,11 @@ export default function ChatForm() {
 
   const sendMessage = (e) => {
        e.preventDefault();
-       db.collection("room")
-       .add({
-         user: user.displayName,
+       db.collection("room").add({
+        user: user.displayName,
          userImage: user.photoURL,
          message,
-         timesamp: firebase.firestore.FieldValue.serverTimesTamp(),
+         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
        })
        .catch((error) => alert(error));
        setMessage("");

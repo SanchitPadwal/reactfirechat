@@ -5,7 +5,7 @@ import Authentication from "./pages/authentication";
 import ChatScreen from "./pages/chat-screen.js";
 
 const App = () => {
-  const user = UseAuthListener;
+  const user = UseAuthListener();
 
   return (
     <div className="App">{user ? <ChatScreen /> : <Authentication />}</div>

@@ -5,6 +5,8 @@ import { FaSignOutAlt } from "react-icons/fa";
 import {auth} from '../../lib/firebase';
 
 export default function Header() {
+  console.log(auth);
+  console.log(auth);
   return (
     <div className="chatscreen-header d-flex justify-content-between">
       <div className="logo">
